@@ -1,0 +1,1 @@
+CREATE VIEW Orders_Detail AS SELECT o.id, total,o.discount_id,o.pay_id,p.transatction_status,p.payment_method FROM orders o,payment_mode p,discounts d WHERE d.id=o.discount_id and p.id=o.pay_id and p.transatction_status="successful"
